@@ -1,0 +1,30 @@
+{
+  "name": "pawcall",
+  "version": "0.1.0",
+  "description": "Find tomorrow's vet clinic reminder calls from an appointments CSV.",
+  "type": "module",
+  "bin": {
+    "pawcall": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "check": "npm test"
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.2",
+    "luxon": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.4.2",
+    "@types/node": "^22.7.5",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
